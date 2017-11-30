@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{API wrapper for coinmarketcap.com}
   spec.description   = %q{Get's ticker data from Coinmarketcap}
-  spec.homepage      = "https://rubygems.org/gems/coinmarketcap-wrapper"
+  spec.homepage      = "https://github.com/cyzanfar/Coinmarketcap-API-wrapper"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   #     "public gem pushes."
   # end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
+  spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
   spec.bindir        = "exe"
