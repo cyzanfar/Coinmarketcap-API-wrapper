@@ -5,14 +5,16 @@ module Coinmarketcap
     class Coin < ApiClient
       class << self
         def all(**opts)
-          response = Faraday.get "#{BASE_API_URL}/#{COIN_PATH}/", opts
-          attributes = JSON.parse(response.body)
+          # response = Faraday.get "#{BASE_API_URL}/#{COIN_PATH}/", opts
+          # attributes = JSON.parse(response.body)
+          binding.pry
+          call_for(COIN_PATH, opts)
           clean_data(attributes, **opts)
           attributes.map { |attribute| new(attribute)}
         end
 
         def find(id, **opts)
-          response = Faraday.get "#{BASE_API_URL}/#{COIN_PATH}/#{id}/", opts
+          # response = Faraday.get "#{BASE_API_URL}/#{COIN_PATH}/#{id}/", opts
           attributes = JSON.parse(response.body)
           clean_data(attributes, **opts)
           new(attributes.first)

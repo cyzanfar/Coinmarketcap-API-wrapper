@@ -17,6 +17,25 @@ module Coinmarketcap
           end
         end
       end
+
+      def self.call_for(path, cache_time=200, opts = {})
+        APICache.get('coinmarketcap_data', :cache => cache_time) do
+          Net::HTTP.start(BASE_API_URL) do |http|
+            req = Net::HTTP::Get.new "/#{path}/")
+            req.set_form_params opts
+            binding.pry
+            response = http.request(req)
+            case response
+            when Net::HTTPSuccess
+              # 2xx response code
+              response.body
+              binding.pry
+            else
+              raise APICache::InvalidResponse
+            end
+          end
+        end
+      end
     end
   end
 end

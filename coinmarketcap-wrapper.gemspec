@@ -1,4 +1,3 @@
-
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "coinmarketcap/wrapper/version"
@@ -36,6 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "vcr",  '~> 3.0', '>= 3.0.3'
   spec.add_development_dependency "webmock",  '~> 3.1', '>= 3.1.1'
 
-  spec.add_dependency "faraday", '~> 0.13.1'
   spec.add_dependency "json", '~> 2.1'
+  spec.add_dependency "api_cache", '~> 0.3.0'
+  spec.add_dependency "moneta", '~> 1.0'
 end

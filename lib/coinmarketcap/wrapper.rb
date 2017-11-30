@@ -2,8 +2,9 @@ require "coinmarketcap/wrapper/version"
 require "coinmarketcap/wrapper/api_client"
 require "coinmarketcap/wrapper/coin"
 require "coinmarketcap/wrapper/market_data"
-require 'faraday'
 require 'json'
+require 'api_client'
+require "moneta"
 
 module Coinmarketcap
   module Wrapper
