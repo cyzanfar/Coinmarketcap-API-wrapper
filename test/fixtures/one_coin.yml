@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.coinmarketcap.com/v1/ticker/bitcoin/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 Nov 2017 17:03:16 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d1759fe429887397ee987327965b4f9751512061396; expires=Fri, 30-Nov-18
+        17:03:16 GMT; path=/; domain=.coinmarketcap.com; HttpOnly; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3c5f61126cdd470a-EWR
+    body:
+      encoding: ASCII-8BIT
+      string: "[\n    {\n        \"id\": \"bitcoin\", \n        \"name\": \"Bitcoin\",
+        \n        \"symbol\": \"BTC\", \n        \"rank\": \"1\", \n        \"price_usd\":
+        \"9480.86\", \n        \"price_btc\": \"1.0\", \n        \"24h_volume_usd\":
+        \"9808640000.0\", \n        \"market_cap_usd\": \"158435125503\", \n        \"available_supply\":
+        \"16711050.0\", \n        \"total_supply\": \"16711050.0\", \n        \"max_supply\":
+        \"21000000.0\", \n        \"percent_change_1h\": \"1.14\", \n        \"percent_change_24h\":
+        \"-13.63\", \n        \"percent_change_7d\": \"15.95\", \n        \"last_updated\":
+        \"1512061152\"\n    }\n]"
+    http_version: 
+  recorded_at: Thu, 30 Nov 2017 17:03:16 GMT
+recorded_with: VCR 3.0.3

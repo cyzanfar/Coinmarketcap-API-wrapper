@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.coinmarketcap.com/v1/global/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 Nov 2017 17:07:17 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d19303072b00172c6132035313d1ba0201512061637; expires=Fri, 30-Nov-18
+        17:07:17 GMT; path=/; domain=.coinmarketcap.com; HttpOnly; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3c5f66f41b2591dc-EWR
+    body:
+      encoding: ASCII-8BIT
+      string: "{\n    \"total_market_cap_usd\": 281798835743.0, \n    \"total_24h_volume_usd\":
+        19710861692.0, \n    \"bitcoin_percentage_of_market_cap\": 55.93, \n    \"active_currencies\":
+        904, \n    \"active_assets\": 414, \n    \"active_markets\": 6991, \n    \"last_updated\":
+        1512061453\n}"
+    http_version: 
+  recorded_at: Thu, 30 Nov 2017 17:07:17 GMT
+recorded_with: VCR 3.0.3
